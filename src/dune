@@ -1,0 +1,4 @@
+(library
+ (name rusage)
+ (public_name rusage)
+ (foreign_stubs (language c) (names rusage_stubs)))
