@@ -3,7 +3,7 @@
 (implicit_transitive_deps false)
 
 (generate_opam_files true)
-(source (github CraigFe/rusage))
+(source (github CraigFe/ocaml-rusage))
 (maintainers "Craig Ferguson <me@craigfe.io>")
 (authors "Zach Shipko")
 
