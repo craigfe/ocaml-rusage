@@ -9,7 +9,7 @@ details of the resource usage of a thread.
 [man-getrusage]: https://www.man7.org/linux/man-pages/man2/getrusage.2.html
 [ci-status]: https://ci.ocamllabs.io/github/CraigFe/ocaml-rusage
 [ci-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fci.ocamllabs.io%2Fbadge%2FCraigFe%2Focaml-rusage%2Fmain&logo=ocaml
-[docs]: https://docs.mirage.io/repr/Repr/index.html
+[docs]: https://craigfe.github.io/ocaml-rusage/rusage/index.html
 
 ## Installation
 

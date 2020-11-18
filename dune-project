@@ -11,4 +11,4 @@
  (name rusage)
  (synopsis "Bindings to the GETRUSAGE(2) syscall")
  (description "Bindings to the GETRUSAGE(2) syscall")
- (documentation https://CraigFe.github.io/rusage/))
+ (documentation https://CraigFe.github.io/ocaml-rusage/))
