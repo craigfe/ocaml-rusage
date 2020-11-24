@@ -4,9 +4,9 @@ synopsis: "Bindings to the GETRUSAGE(2) syscall"
 description: "Bindings to the GETRUSAGE(2) syscall"
 maintainer: ["Craig Ferguson <me@craigfe.io>"]
 authors: ["Zach Shipko"]
-homepage: "https://github.com/CraigFe/rusage"
-doc: "https://CraigFe.github.io/rusage/"
-bug-reports: "https://github.com/CraigFe/rusage/issues"
+homepage: "https://github.com/CraigFe/ocaml-rusage"
+doc: "https://CraigFe.github.io/ocaml-rusage/"
+bug-reports: "https://github.com/CraigFe/ocaml-rusage/issues"
 depends: [
   "dune" {>= "2.0"}
 ]
@@ -24,4 +24,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-dev-repo: "git+https://github.com/CraigFe/rusage.git"
+dev-repo: "git+https://github.com/CraigFe/ocaml-rusage.git"

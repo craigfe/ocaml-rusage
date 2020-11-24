@@ -3,7 +3,7 @@
 (implicit_transitive_deps false)
 
 (generate_opam_files true)
-(source (github CraigFe/rusage))
+(source (github CraigFe/ocaml-rusage))
 (maintainers "Craig Ferguson <me@craigfe.io>")
 (authors "Zach Shipko")
 
@@ -11,4 +11,4 @@
  (name rusage)
  (synopsis "Bindings to the GETRUSAGE(2) syscall")
  (description "Bindings to the GETRUSAGE(2) syscall")
- (documentation https://CraigFe.github.io/rusage/))
+ (documentation https://CraigFe.github.io/ocaml-rusage/))
