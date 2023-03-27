@@ -71,5 +71,7 @@ type who =
           will include the resources used by grandchildren, and further removed
           descendants, if all of the intervening descendants waited on their
           terminated children.*)
+  | Thread
+      (** Return resource usage statistics for the calling thread. *)
 
 external get : who -> t = "unix_getrusage"

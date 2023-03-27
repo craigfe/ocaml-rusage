@@ -14,6 +14,8 @@ PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
 TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE. */
 
+#define _GNU_SOURCE
+
 #include <caml/alloc.h>
 #include <caml/fail.h>
 #include <caml/memory.h>
@@ -27,7 +29,18 @@ PERFORMANCE OF THIS SOFTWARE. */
 CAMLprim value unix_getrusage(value v_who) {
   CAMLparam1(v_who);
   CAMLlocal1(v_usage);
-  int who = (Int_val(v_who) == 0) ? RUSAGE_SELF : RUSAGE_CHILDREN;
+  int who = RUSAGE_THREAD;
+  switch (Int_val(v_who)) {
+    case 0:
+      who = RUSAGE_SELF;
+      break;
+    case 1:
+      who = RUSAGE_CHILDREN;
+      break;
+    default:
+      who = RUSAGE_THREAD;
+  }
+/*   int who = (Int_val(v_who) == 0) ? RUSAGE_SELF : RUSAGE_CHILDREN; */
   struct rusage ru;
   if (getrusage(who, &ru)) {
     caml_invalid_argument("getrusage");
