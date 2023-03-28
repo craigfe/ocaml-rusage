@@ -40,7 +40,6 @@ CAMLprim value unix_getrusage(value v_who) {
     default:
       who = RUSAGE_THREAD;
   }
-/*   int who = (Int_val(v_who) == 0) ? RUSAGE_SELF : RUSAGE_CHILDREN; */
   struct rusage ru;
   if (getrusage(who, &ru)) {
     caml_invalid_argument("getrusage");
