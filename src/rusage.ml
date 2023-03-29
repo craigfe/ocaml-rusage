@@ -72,6 +72,8 @@ type who =
           descendants, if all of the intervening descendants waited on their
           terminated children.*)
   | Thread
-      (** Return resource usage statistics for the calling thread. *)
+      (** Return resource usage statistics for the calling thread.
+          @since Linux 2.6.26.
+          @raise Invalid_argument if the plateform does not support it. *)
 
 external get : who -> t = "unix_getrusage"

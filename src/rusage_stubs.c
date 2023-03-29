@@ -29,7 +29,7 @@ PERFORMANCE OF THIS SOFTWARE. */
 CAMLprim value unix_getrusage(value v_who) {
   CAMLparam1(v_who);
   CAMLlocal1(v_usage);
-  int who = RUSAGE_THREAD;
+  int who = RUSAGE_SELF;
   switch (Int_val(v_who)) {
     case 0:
       who = RUSAGE_SELF;
@@ -38,7 +38,11 @@ CAMLprim value unix_getrusage(value v_who) {
       who = RUSAGE_CHILDREN;
       break;
     default:
-      who = RUSAGE_THREAD;
+      #ifndef RUSAGE_THREAD
+        caml_invalid_argument("getrusage");
+      #else
+        who = RUSAGE_THREAD;
+      #endif
   }
   struct rusage ru;
   if (getrusage(who, &ru)) {
