@@ -73,6 +73,7 @@ type who =
           terminated children.*)
   | Thread
       (** Return resource usage statistics for the calling thread.
+
           @since Linux 2.6.26.
           @raise Invalid_argument if the plateform does not support it. *)
 
